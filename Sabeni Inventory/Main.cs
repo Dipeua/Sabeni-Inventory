@@ -33,7 +33,7 @@ namespace Sabeni_Inventory
             int itemCount = listViewProduit.Items.Count + 1;
             if (String.IsNullOrEmpty(txtEMS.Text) || String.IsNullOrEmpty(txtQTES.Text) || String.IsNullOrEmpty(listProduit.Text))
             {
-                MessageBox.Show("Veuillez remplir tous les champs.");
+                MessageBox.Show("Veuillez remplir tous les champs.","Erreur detecter.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else if (!Regex.IsMatch(txtEMS.Text, @"^\d{4}$") || txtEMS.Text == "0000")
@@ -44,7 +44,7 @@ namespace Sabeni_Inventory
             }
             else if (!int.TryParse(txtQTES.Text, out int quantite) || quantite < 1 || quantite > 20)
             {
-                MessageBox.Show("Quantité de produit invalide. Elle doit être comprise entre 1 et 20.",
+                MessageBox.Show("La quantité de produit invalide. Elle doit être comprise entre 1 et 20.",
                                 "Erreur de quantité", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
