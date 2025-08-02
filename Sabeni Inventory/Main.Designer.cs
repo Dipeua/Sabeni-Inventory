@@ -32,11 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listProduit = new System.Windows.Forms.ListBox();
             this.txtQTES = new System.Windows.Forms.TextBox();
             this.txtEMS = new System.Windows.Forms.TextBox();
             this.btnADD = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewProduit = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -75,7 +75,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnADD);
-            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.listProduit);
             this.groupBox1.Controls.Add(this.txtQTES);
             this.groupBox1.Controls.Add(this.txtEMS);
             this.groupBox1.Controls.Add(this.label1);
@@ -88,21 +88,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Entrer les informations des produits";
             // 
-            // listBox1
+            // listProduit
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 19;
-            this.listBox1.Items.AddRange(new object[] {
+            this.listProduit.FormattingEnabled = true;
+            this.listProduit.ItemHeight = 19;
+            this.listProduit.Items.AddRange(new object[] {
             "CARDIHIT",
             "ST HEART",
             "DIABETIC",
             "XENOPROST ACTIVE",
             "SLIMUX",
             "PROSTUROS"});
-            this.listBox1.Location = new System.Drawing.Point(163, 78);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(215, 137);
-            this.listBox1.TabIndex = 5;
+            this.listProduit.Location = new System.Drawing.Point(163, 78);
+            this.listProduit.Name = "listProduit";
+            this.listProduit.Size = new System.Drawing.Size(215, 137);
+            this.listProduit.TabIndex = 5;
             // 
             // txtQTES
             // 
@@ -127,21 +127,22 @@
             this.btnADD.TabIndex = 6;
             this.btnADD.Text = "Ajouter";
             this.btnADD.UseVisualStyleBackColor = true;
+            this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
             // 
-            // listView1
+            // listViewProduit
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewProduit.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(445, 23);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(446, 302);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewProduit.HideSelection = false;
+            this.listViewProduit.Location = new System.Drawing.Point(445, 23);
+            this.listViewProduit.Name = "listViewProduit";
+            this.listViewProduit.Size = new System.Drawing.Size(446, 302);
+            this.listViewProduit.TabIndex = 4;
+            this.listViewProduit.UseCompatibleStateImageBehavior = false;
+            this.listViewProduit.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -177,12 +178,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 372);
             this.Controls.Add(this.btnEXCEL);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewProduit);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Fira Code", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Main";
             this.Text = "Sabeni Inventory";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -197,9 +199,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtQTES;
         private System.Windows.Forms.TextBox txtEMS;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listProduit;
         private System.Windows.Forms.Button btnADD;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewProduit;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
