@@ -150,12 +150,12 @@
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "NUMERO EMS";
+            this.columnHeader2.Text = "PRODUITS";
             this.columnHeader2.Width = 150;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "PRODUITS";
+            this.columnHeader3.Text = "NUMERO EMS";
             this.columnHeader3.Width = 180;
             // 
             // columnHeader4

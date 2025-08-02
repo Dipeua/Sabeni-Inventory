@@ -162,7 +162,9 @@ namespace Sabeni_Inventory
                 worksheet.Columns("A:D").AdjustToContents();
 
                 // Sauvegarder sur le bureau
-                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ETAT_RETROU_EMS.xlsx");
+                string dateDuJour = DateTime.Now.ToString("dd-MM-yyyy");
+                string nomFichier = $"RETOUR DU {dateDuJour}.xlsx";
+                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), nomFichier);
                 workbook.SaveAs(filePath);
 
                 MessageBox.Show("Fichier enregistré sur le Bureau :\n" + filePath, "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -185,12 +187,6 @@ namespace Sabeni_Inventory
                 // 👉 À remplacer par ta logique de génération de fichier Excel (si pas encore faite)
                 // Exemple fictif : GenerateExcelFile();
                 GenerateExcelFile();
-                MessageBox.Show(
-                    "Votre fichier Excel a été généré et est disponible sur votre disque.",
-                    "Téléchargement terminé",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                );
             }
         }
     }
