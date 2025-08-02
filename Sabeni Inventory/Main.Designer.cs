@@ -171,6 +171,7 @@
             this.btnEXCEL.TabIndex = 5;
             this.btnEXCEL.Text = "Generer le fichier";
             this.btnEXCEL.UseVisualStyleBackColor = true;
+            this.btnEXCEL.Click += new System.EventHandler(this.btnEXCEL_Click);
             // 
             // Main
             // 
