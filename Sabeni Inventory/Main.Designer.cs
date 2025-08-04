@@ -32,10 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnADD = new System.Windows.Forms.Button();
             this.listProduit = new System.Windows.Forms.ListBox();
             this.txtQTES = new System.Windows.Forms.TextBox();
             this.txtEMS = new System.Windows.Forms.TextBox();
-            this.btnADD = new System.Windows.Forms.Button();
             this.listViewProduit = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -66,7 +66,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 239);
+            this.label3.Location = new System.Drawing.Point(41, 244);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 19);
             this.label3.TabIndex = 2;
@@ -88,25 +88,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Entrer les informations des produits";
             // 
+            // btnADD
+            // 
+            this.btnADD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnADD.Location = new System.Drawing.Point(163, 289);
+            this.btnADD.Name = "btnADD";
+            this.btnADD.Size = new System.Drawing.Size(215, 29);
+            this.btnADD.TabIndex = 6;
+            this.btnADD.Text = "Ajouter";
+            this.btnADD.UseVisualStyleBackColor = true;
+            this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
+            // 
             // listProduit
             // 
             this.listProduit.FormattingEnabled = true;
             this.listProduit.ItemHeight = 19;
             this.listProduit.Items.AddRange(new object[] {
-            "CARDIHIT",
-            "ST HEART",
-            "DIABETIC",
-            "XENOPROST ACTIVE",
-            "SLIMUX",
-            "PROSTUROS"});
+            "CARDIHIT  ",
+            "DIABETIC  ",
+            "FAST ACTIVE  ",
+            "GLUCOZEIN  ",
+            "PROSTUROS  ",
+            "SLIMUX  ",
+            "ST HEART  ",
+            "XENOPROST ACTIVE"});
             this.listProduit.Location = new System.Drawing.Point(163, 78);
             this.listProduit.Name = "listProduit";
-            this.listProduit.Size = new System.Drawing.Size(215, 137);
+            this.listProduit.Size = new System.Drawing.Size(215, 156);
             this.listProduit.TabIndex = 5;
             // 
             // txtQTES
             // 
-            this.txtQTES.Location = new System.Drawing.Point(163, 239);
+            this.txtQTES.Location = new System.Drawing.Point(163, 244);
             this.txtQTES.Name = "txtQTES";
             this.txtQTES.Size = new System.Drawing.Size(215, 23);
             this.txtQTES.TabIndex = 3;
@@ -117,17 +130,6 @@
             this.txtEMS.Name = "txtEMS";
             this.txtEMS.Size = new System.Drawing.Size(215, 23);
             this.txtEMS.TabIndex = 3;
-            // 
-            // btnADD
-            // 
-            this.btnADD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnADD.Location = new System.Drawing.Point(163, 284);
-            this.btnADD.Name = "btnADD";
-            this.btnADD.Size = new System.Drawing.Size(215, 29);
-            this.btnADD.TabIndex = 6;
-            this.btnADD.Text = "Ajouter";
-            this.btnADD.UseVisualStyleBackColor = true;
-            this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
             // 
             // listViewProduit
             // 
